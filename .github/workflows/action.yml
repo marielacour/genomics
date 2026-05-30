@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with making a new folder and moving fastq files
 
-name: gacrc
+name: Test script
 
 # Make new folder
 on: ~/instructor_notes/data/untrimmed_fastq
