@@ -1,6 +1,8 @@
 # Update README.md
 # Genomics_Decoded Project Framework and Workflows: A Tool for Staying Organized
 
+.github/workflows
+
 MyProject helps data scientists create rigorous and reproducible computational framework for genomics analysis and deep learning.
 
 ## Installation
