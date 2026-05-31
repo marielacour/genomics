@@ -2,3 +2,30 @@
 # ecoli_variation
 # data
 # genomics.sh
+#Unfiltered_fastq
+  0_setup.sh
+  1_quality_control.sh
+  2_alignment
+For output
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
+# ecoli_variation.code-workspace
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
+# sub
+SRR2589044_1.trim.sub.fastq
+SRR2589044_2.trim.sub.fastq
+SRR2584863_2.trim.sub.fastq
+SRR2584866_2.trim.sub.fastq
