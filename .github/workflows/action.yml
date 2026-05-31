@@ -1,11 +1,19 @@
-# This is a basic workflow to help you get started with Actions
+# This is a basic workflow to help you get started with making a new folder and moving fastq files
 
-name: CI
+name: Test script
 
-# Controls when the workflow will run
-on:
+# Make new folder
+on: ~/instructor_notes/data/untrimmed_fastq
+on: ~/scratch/user.name/genomics.sh
+# Move fastq files from 
+on:curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_1.fastq.gz
+curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_2.fastq.gz
+curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_1.fastq.gz
+curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_2.fastq.gz
+curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_1.fastq.gz
+curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_2.fastq.gz
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
+  push: 
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -18,7 +26,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: genomics-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
