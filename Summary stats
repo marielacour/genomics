@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# Create a "summary_stats.sh" script  # count the number of reads in the raw and number /
+of reads in the trimmed data, number of reads in the aligned genome, and number of variant sites from each sample
+
+#  Save the number totals to a tidy-formatted data file
