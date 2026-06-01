@@ -1,0 +1,35 @@
+#! /bin/bash
+
+# 1_quality_control
+# Perform basic quality control on the FASTQ files
+
+# Run FASTQ
+module load Java/11.0.20
+module load FastQC/0.12.1-Java-11
+fastq_data/untrimmed_fastq/*.fastq.gz
+
+# Move FASTQC results to appropriate results folder
+# mkdir results
+mv data/untrimmed_fastq/*.zip results/untrimmed_fastqc
+mv data/untrimmed_fastq/*html results/untrimmed_fastqc
+
+# Combine FASTQC reports with multiQC
+module load MultiQC/1.28-foss-2024a
+multiQC results/untrimmed_fastqc -o results/untrimmed_multiqc
+
+# Trim FASTQC files
+
+# Trim FASTQ files with trimmomatic
+mkdir data/trimmed_fastq
+module spider Trimmomatic/0.39-Java-17
+
+for fwd in data/untrimmed_fastq/*_1.fastq.gz
+do
+    sample=$(basename $fwd _1.fastq.gz)
+    echo "Processing $sample"
+
+trimmomatic PE data/untrimmed_fastq/${sample}_1.fastq.gz SRR2589044_2.fastq.gz \
+                data/trimmed_fastsq/${sample}.trim.fastq.gz ${sample}_1un.trim.fastq.gz \
+                data/trimmed_fastsq/${sample}_2.trim.fastq.gz SRR2589044_2un.trim.fastq.gz \
+                SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15
+done
