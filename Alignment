@@ -31,7 +31,7 @@ do
 bwa mem data/ref_genome/ecoli_rel606.fasta \
     data/sub/${sample}_1.trim.sub.fastq \
     data/sub/${sample}_2.trim.sub.fastq \
-    > results/bam/${sample}.bam 
+    > results/sam/${sample}.sam 
 
 # # Convert to bam format
 samtools view -S -b results/sam/${sample}.sam \
