@@ -3,7 +3,7 @@
 
 .github/workflows
 
-MyProject helps data scientists create rigorous and reproducible computational framework for genomics analysis and deep learning.
+The project helps data scientists create rigorous and reproducible computational framework for genomics analysis and deep learning.
 
 ## Installation
 #Clone the repository and install dependencies:
