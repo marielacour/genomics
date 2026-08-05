@@ -9,10 +9,10 @@ The project helps data scientists create rigorous and reproducible computational
 #Clone the repository and install dependencies:
 ```bash
 #git clone git@github.com:marielacour/genomics.git
-cd MyProject
+cd Project
 #pip install -r requirements.txt
 
 
 License
 
-MIT License © 2025 Genomics_Decoded
+MIT License © 2025 LaCour, O.M. Genomics_Decoded
