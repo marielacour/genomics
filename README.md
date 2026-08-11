@@ -4,6 +4,7 @@
 .github/workflows
 
 The project helps data scientists create rigorous and reproducible computational framework for genomics analysis and deep learning.
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## Installation
 #Clone the repository and install dependencies:
